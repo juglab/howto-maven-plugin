@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>27.0.1</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.scijava.maven</groupId>
+	<artifactId>howto-maven-plugin</artifactId>
+	<version>0.1.0</version>
+	<packaging>maven-plugin</packaging>
+
+	<name>HowTo plugin</name>
+	<description>A plugin for generating cheat sheets.</description>
+	<url>https://github.com/juglab/maven-cheatsheet-plugin</url>
+	<inceptionYear>2019</inceptionYear>
+	<organization>
+		<name>CSBD</name>
+		<url>https://csbdresden.de/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Simplified BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>frauzufall</id>
+			<name>Deborah SChmidt</name>
+			<url>https://imagej.net/User:Frauzufall</url>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tags/scijava</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/juglab/maven-cheatsheet-plugin</connection>
+		<developerConnection>scm:git:git@github.com:juglab/maven-cheatsheet-plugin</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/juglab/maven-cheatsheet-plugin</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/juglab/maven-cheatsheet-plugin/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.com/juglab/maven-cheatsheet-plugin</url>
+	</ciManagement>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>juglab</id>
+			<url>https://dais-maven.mpi-cbg.de/repository/juglab/</url>
+		</repository>
+	</repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>juglab</id>
+            <name>DAIS Maven juglab repository</name>
+            <url>https://dais-maven.mpi-cbg.de/repository/juglab/</url>
+        </repository>
+    </distributionManagement>
+
+	<properties>
+		<package-name>org.scijava.maven</package-name>
+
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.copyrightOwners>Max Planck Institute of Molecular Cell Biology and Genetics.</license.copyrightOwners>
+		<license.projectName>A plugin for generating cheat sheets.</license.projectName>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugin-tools</groupId>
+			<artifactId>maven-plugin-annotations</artifactId>
+			<version>3.6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+			<version>${scijava-common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.javaparser</groupId>
+			<artifactId>javaparser-core</artifactId>
+			<version>3.14.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+	</dependencies>
+</project>
